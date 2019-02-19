@@ -1,21 +1,16 @@
 {
   "name": "control-empleados",
   "version": "0.0.0",
-  "engines": {
-    "node": "10.15.1",
-	"npm": "6.x"
-  }
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
-    "heroku-postbuild": "bower install && grunt build"
+    "e2e": "ng e2e",
+    "postinstall": "ng build --aot -prod"
   },
-  "cacheDirectories": ["client/node_modules", "server/node_modules"]
   "private": true,
   "dependencies": {
     "@angular/animations": "^4.2.4",
@@ -29,10 +24,12 @@
     "@angular/router": "^4.2.4",
     "bootstrap": "^4.3.1",
     "core-js": "^2.4.1",
-	"ts-helpers": "^1.1.1",
+    "express": "^4.16.4",
     "jquery": "^3.3.1",
+    "path": "^0.12.7",
     "popper.js": "^1.14.7",
     "rxjs": "^5.4.2",
+    "typescript": "~2.3.3"
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
@@ -55,5 +52,9 @@
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
     "typescript": "~2.3.3"
+  },
+  "engines": {
+    "node": "10.15.1",
+    "npm": "6.8.0"
   }
 }
