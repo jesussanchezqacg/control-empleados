@@ -1,6 +1,9 @@
 {
   "name": "control-empleados",
   "version": "0.0.0",
+  "engines": {
+    "node": "10.15.1"
+  }
   "license": "MIT",
   "scripts": {
     "start": "http-server",
