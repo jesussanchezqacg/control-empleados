@@ -7,7 +7,7 @@
   }
   "license": "MIT",
   "scripts": {
-    "start": "ng serve",
+    "start": "ng start",
     "test": "mocha",
     "heroku-postbuild": "bower install && grunt build"
   },
